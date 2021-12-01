@@ -1,6 +1,5 @@
 package com.fingerprint;
 
-import com.hieuvp.fingerprint.ReactNativeFingerprintScannerPackage;
 import android.app.Application;
 import android.content.Context;
 import android.content.res.Configuration;
@@ -20,6 +19,8 @@ import com.facebook.react.bridge.JSIModulePackage;
 import com.swmansion.reanimated.ReanimatedJSIModulePackage;
 
 import java.lang.reflect.InvocationTargetException;
+import com.hieuvp.fingerprint.ReactNativeFingerprintScannerPackage;
+import java.util.Arrays;
 import java.util.List;
 
 public class MainApplication extends Application implements ReactApplication {
@@ -35,9 +36,7 @@ public class MainApplication extends Application implements ReactApplication {
     protected List<ReactPackage> getPackages() {
       @SuppressWarnings("UnnecessaryLocalVariable")
       List<ReactPackage> packages = new PackageList(this).getPackages();
-      packages.add(new ReactNativeFingerprintScannerPackage());
-      // Packages that cannot be autolinked yet can be added manually here, for example:
-      // packages.add(new MyReactNativePackage());
+      //packages.add(new ReactNativeFingerprintScannerPackage());
       return packages;
     }
 
